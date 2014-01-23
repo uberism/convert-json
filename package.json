@@ -10,8 +10,8 @@
   "author": "chilijung",
   "license": "MIT",
   "dependencies": {
-    "xls-to-json": "0.0.1",
-    "xlsx-to-json": "0.0.1",
-    "node-csv-json": "0.0.1"
+    "xls-to-json": "0.0.2",
+    "xlsx-to-json": "0.0.2",
+    "node-csv-json": "0.0.2"
   }
 }
