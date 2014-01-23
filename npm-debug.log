@@ -1,0 +1,140 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'publish', '.' ]
+2 info using npm@1.3.21
+3 info using node@v0.10.24
+4 verbose node symlink /usr/bin/node
+5 verbose publish [ '.' ]
+6 verbose cache add [ '.', null ]
+7 verbose cache add name=undefined spec="." args=[".",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '.',
+8 verbose parsed url   path: '.',
+8 verbose parsed url   href: '.' }
+9 silly lockFile 3a52ce78- .
+10 verbose lock . /home/howard/.npm/3a52ce78-.lock
+11 verbose tar pack [ '/home/howard/tmp/npm-19587-_FZy4urH/1390480372474-0.6296970646362752/tmp.tgz',
+11 verbose tar pack   '.' ]
+12 verbose tarball /home/howard/tmp/npm-19587-_FZy4urH/1390480372474-0.6296970646362752/tmp.tgz
+13 verbose folder .
+14 info prepublish convert-json@0.0.0
+15 silly lockFile 1f1177db-tar tar://.
+16 verbose lock tar://. /home/howard/.npm/1f1177db-tar.lock
+17 silly lockFile 9b9b308b-72474-0-6296970646362752-tmp-tgz tar:///home/howard/tmp/npm-19587-_FZy4urH/1390480372474-0.6296970646362752/tmp.tgz
+18 verbose lock tar:///home/howard/tmp/npm-19587-_FZy4urH/1390480372474-0.6296970646362752/tmp.tgz /home/howard/.npm/9b9b308b-72474-0-6296970646362752-tmp-tgz.lock
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 1f1177db-tar tar://.
+21 silly lockFile 9b9b308b-72474-0-6296970646362752-tmp-tgz tar:///home/howard/tmp/npm-19587-_FZy4urH/1390480372474-0.6296970646362752/tmp.tgz
+22 silly lockFile 9b9b308b-72474-0-6296970646362752-tmp-tgz tar:///home/howard/tmp/npm-19587-_FZy4urH/1390480372474-0.6296970646362752/tmp.tgz
+23 verbose tar unpack /home/howard/tmp/npm-19587-_FZy4urH/1390480372474-0.6296970646362752/tmp.tgz
+24 silly lockFile 2f5f57d9-72474-0-6296970646362752-package tar:///home/howard/tmp/npm-19587-_FZy4urH/1390480372474-0.6296970646362752/package
+25 verbose lock tar:///home/howard/tmp/npm-19587-_FZy4urH/1390480372474-0.6296970646362752/package /home/howard/.npm/2f5f57d9-72474-0-6296970646362752-package.lock
+26 silly lockFile 9b9b308b-72474-0-6296970646362752-tmp-tgz tar:///home/howard/tmp/npm-19587-_FZy4urH/1390480372474-0.6296970646362752/tmp.tgz
+27 verbose lock tar:///home/howard/tmp/npm-19587-_FZy4urH/1390480372474-0.6296970646362752/tmp.tgz /home/howard/.npm/9b9b308b-72474-0-6296970646362752-tmp-tgz.lock
+28 silly gunzTarPerm modes [ '755', '644' ]
+29 silly gunzTarPerm extractEntry package.json
+30 silly gunzTarPerm extractEntry .npmignore
+31 silly gunzTarPerm extractEntry README.md
+32 silly gunzTarPerm extractEntry index.js
+33 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+34 silly gunzTarPerm extractEntry libs/index.js
+35 silly gunzTarPerm modified mode [ 'libs/index.js', 438, 420 ]
+36 silly gunzTarPerm extractEntry sample/sample.js
+37 silly gunzTarPerm modified mode [ 'sample/sample.js', 438, 420 ]
+38 silly gunzTarPerm extractEntry sample/interview.xlsx
+39 silly gunzTarPerm extractEntry sample/number_format.xls
+40 silly gunzTarPerm extractEntry sample/test.csv
+41 silly lockFile 2f5f57d9-72474-0-6296970646362752-package tar:///home/howard/tmp/npm-19587-_FZy4urH/1390480372474-0.6296970646362752/package
+42 silly lockFile 2f5f57d9-72474-0-6296970646362752-package tar:///home/howard/tmp/npm-19587-_FZy4urH/1390480372474-0.6296970646362752/package
+43 silly lockFile 9b9b308b-72474-0-6296970646362752-tmp-tgz tar:///home/howard/tmp/npm-19587-_FZy4urH/1390480372474-0.6296970646362752/tmp.tgz
+44 silly lockFile 9b9b308b-72474-0-6296970646362752-tmp-tgz tar:///home/howard/tmp/npm-19587-_FZy4urH/1390480372474-0.6296970646362752/tmp.tgz
+45 verbose tar pack [ '/home/howard/.npm/convert-json/0.0.0/package.tgz',
+45 verbose tar pack   '/home/howard/tmp/npm-19587-_FZy4urH/1390480372474-0.6296970646362752/package' ]
+46 verbose tarball /home/howard/.npm/convert-json/0.0.0/package.tgz
+47 verbose folder /home/howard/tmp/npm-19587-_FZy4urH/1390480372474-0.6296970646362752/package
+48 silly lockFile 2f5f57d9-72474-0-6296970646362752-package tar:///home/howard/tmp/npm-19587-_FZy4urH/1390480372474-0.6296970646362752/package
+49 verbose lock tar:///home/howard/tmp/npm-19587-_FZy4urH/1390480372474-0.6296970646362752/package /home/howard/.npm/2f5f57d9-72474-0-6296970646362752-package.lock
+50 silly lockFile 256710e8-m-convert-json-0-0-0-package-tgz tar:///home/howard/.npm/convert-json/0.0.0/package.tgz
+51 verbose lock tar:///home/howard/.npm/convert-json/0.0.0/package.tgz /home/howard/.npm/256710e8-m-convert-json-0-0-0-package-tgz.lock
+52 silly lockFile 2f5f57d9-72474-0-6296970646362752-package tar:///home/howard/tmp/npm-19587-_FZy4urH/1390480372474-0.6296970646362752/package
+53 silly lockFile 2f5f57d9-72474-0-6296970646362752-package tar:///home/howard/tmp/npm-19587-_FZy4urH/1390480372474-0.6296970646362752/package
+54 silly lockFile 256710e8-m-convert-json-0-0-0-package-tgz tar:///home/howard/.npm/convert-json/0.0.0/package.tgz
+55 silly lockFile 256710e8-m-convert-json-0-0-0-package-tgz tar:///home/howard/.npm/convert-json/0.0.0/package.tgz
+56 silly lockFile f26afc57-d-npm-convert-json-0-0-0-package /home/howard/.npm/convert-json/0.0.0/package
+57 verbose lock /home/howard/.npm/convert-json/0.0.0/package /home/howard/.npm/f26afc57-d-npm-convert-json-0-0-0-package.lock
+58 silly lockFile f26afc57-d-npm-convert-json-0-0-0-package /home/howard/.npm/convert-json/0.0.0/package
+59 silly lockFile f26afc57-d-npm-convert-json-0-0-0-package /home/howard/.npm/convert-json/0.0.0/package
+60 verbose tar unpack /home/howard/.npm/convert-json/0.0.0/package.tgz
+61 silly lockFile bda700a0-d-npm-convert-json-0-0-0-package tar:///home/howard/.npm/convert-json/0.0.0/package
+62 verbose lock tar:///home/howard/.npm/convert-json/0.0.0/package /home/howard/.npm/bda700a0-d-npm-convert-json-0-0-0-package.lock
+63 silly lockFile 256710e8-m-convert-json-0-0-0-package-tgz tar:///home/howard/.npm/convert-json/0.0.0/package.tgz
+64 verbose lock tar:///home/howard/.npm/convert-json/0.0.0/package.tgz /home/howard/.npm/256710e8-m-convert-json-0-0-0-package-tgz.lock
+65 silly gunzTarPerm modes [ '755', '644' ]
+66 silly gunzTarPerm extractEntry package.json
+67 silly gunzTarPerm extractEntry .npmignore
+68 silly gunzTarPerm extractEntry README.md
+69 silly gunzTarPerm extractEntry index.js
+70 silly gunzTarPerm extractEntry libs/index.js
+71 silly gunzTarPerm extractEntry sample/sample.js
+72 silly gunzTarPerm extractEntry sample/interview.xlsx
+73 silly gunzTarPerm extractEntry sample/number_format.xls
+74 silly gunzTarPerm extractEntry sample/test.csv
+75 silly lockFile bda700a0-d-npm-convert-json-0-0-0-package tar:///home/howard/.npm/convert-json/0.0.0/package
+76 silly lockFile bda700a0-d-npm-convert-json-0-0-0-package tar:///home/howard/.npm/convert-json/0.0.0/package
+77 silly lockFile 256710e8-m-convert-json-0-0-0-package-tgz tar:///home/howard/.npm/convert-json/0.0.0/package.tgz
+78 silly lockFile 256710e8-m-convert-json-0-0-0-package-tgz tar:///home/howard/.npm/convert-json/0.0.0/package.tgz
+79 verbose chmod /home/howard/.npm/convert-json/0.0.0/package.tgz 644
+80 verbose chown /home/howard/.npm/convert-json/0.0.0/package.tgz [ 1000, 1000 ]
+81 silly lockFile 3a52ce78- .
+82 silly lockFile 3a52ce78- .
+83 silly publish { name: 'convert-json',
+83 silly publish   version: '0.0.0',
+83 silly publish   description: 'auto detect file type and convert it to json format',
+83 silly publish   main: 'index.js',
+83 silly publish   keyword: 'json format',
+83 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+83 silly publish   author: { name: 'chilijung' },
+83 silly publish   license: 'MIT',
+83 silly publish   dependencies:
+83 silly publish    { 'xls-to-json': '0.0.2',
+83 silly publish      'xlsx-to-json': '0.0.2',
+83 silly publish      'node-csv-json': '0.0.2' },
+83 silly publish   readme: '# Convert JSON\n\nAuto detect different type of file format and convert it into JSON.\n\n## Support\n\n- csv\n- xlsx\n- xls\n\n## Install\n\n```\nnpm install convert-json\n```\n\n## Sample\n\n```\nvar cv_json = require(\'..\');\n\ncv_json({\n    // now supporting csv, xls, xlsx format\n    input: __dirname + \'/number_format.xls\',\n    output: null\n  }, function(err, result) {\n    if(err) {\n      console.error(err);\n    }else {\n      console.log(result);\n    }\n  \n  }\n  );\n```\n\nIn config object, you have to enter an input path. But If you don\'t want to output any file you can set to `null`.\n\n\n## License\n\nMIT [@chiljung](http://github.com/chilijung)\n',
+83 silly publish   readmeFilename: 'README.md',
+83 silly publish   _id: 'convert-json@0.0.0',
+83 silly publish   dist: { shasum: '8c6149d2c6e265c88f4458e1ead2d9e0d171ab33' },
+83 silly publish   _from: '.' }
+84 verbose url raw convert-json
+85 verbose url resolving [ 'https://registry.npmjs.org/', './convert-json' ]
+86 verbose url resolved https://registry.npmjs.org/convert-json
+87 info trying registry request attempt 1 at 20:32:52
+88 http PUT https://registry.npmjs.org/convert-json
+89 http 409 https://registry.npmjs.org/convert-json
+90 verbose url raw convert-json
+91 verbose url resolving [ 'https://registry.npmjs.org/', './convert-json' ]
+92 verbose url resolved https://registry.npmjs.org/convert-json
+93 info trying registry request attempt 1 at 20:32:58
+94 http GET https://registry.npmjs.org/convert-json
+95 http 200 https://registry.npmjs.org/convert-json
+96 error publish fail Cannot publish over existing version.
+96 error publish fail Update the 'version' field in package.json and try again.
+96 error publish fail
+96 error publish fail If the previous version was published in error, see:
+96 error publish fail     npm help unpublish
+96 error publish fail
+96 error publish fail To automatically increment version numbers, see:
+96 error publish fail     npm help version
+97 error System Linux 3.11.0-12-generic
+98 error command "/usr/bin/node" "/usr/bin/npm" "publish" "."
+99 error cwd /home/howard/Documents/DataGarage/convert-json
+100 error node -v v0.10.24
+101 error npm -v 1.3.21
+102 error code EPUBLISHCONFLICT
+103 verbose exit [ 1, true ]
