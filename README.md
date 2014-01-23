@@ -8,6 +8,12 @@ Auto detect different type of file format and convert it into JSON.
 - xlsx
 - xls
 
+## Install
+
+```
+npm install convert-json
+```
+
 ## Sample
 
 ```
