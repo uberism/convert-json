@@ -1,0 +1,17 @@
+{
+  "name": "convert-json",
+  "version": "0.0.0",
+  "description": "auto detect file type and convert it to json format",
+  "main": "index.js",
+  "keyword": "json format",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chilijung",
+  "license": "MIT",
+  "dependencies": {
+    "xls-to-json": "0.0.1",
+    "xlsx-to-json": "0.0.1",
+    "node-csv-json": "0.0.1"
+  }
+}
