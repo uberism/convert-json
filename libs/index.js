@@ -2,6 +2,7 @@ var fs = require('fs');
 var csv_json = require('node-csv-json');
 var xls_json = require('xls-to-json');
 var xlsx_json = require('xlsx-to-json');
+var xml_json = require('xml-to-json');
 
 var header = []
 	, record = [];
@@ -30,6 +31,8 @@ CV = function(config, callback) {
 		case 'xlsx':
 			return this.cvXLSX(config, callback);
 			break;
+		case 'xml':
+			return this.cvXML(config, callback);
 		default:
 			callback('Not Support');
 	}
@@ -68,6 +71,19 @@ CV.prototype.cvXLS = function(config, callback) {
 
 CV.prototype.cvXLSX = function(config, callback) {
 	xlsx_json({
+		input: config.input, 
+		output: config.output
+	}, function(err, result){
+		if(err) {
+			callback(err)
+		}else {
+			callback(null, result)
+		}
+	});
+}
+
+CV.prototype.cvXML = function(config, callback) {
+	xml_json({
 		input: config.input, 
 		output: config.output
 	}, function(err, result){

@@ -7,6 +7,7 @@ Auto detect different type of file format and convert it into JSON.
 - csv
 - xlsx
 - xls
+- xml
 
 ## Install
 
@@ -20,7 +21,7 @@ npm install convert-json
 var cv_json = require('..');
 
 cv_json({
-    // now supporting csv, xls, xlsx format
+    // now supporting csv, xls, xlsx, xml format
     input: __dirname + '/number_format.xls',
     output: null
   }, function(err, result) {
