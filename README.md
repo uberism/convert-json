@@ -1,5 +1,7 @@
 # Convert JSON
 
+[![Build Status](https://travis-ci.org/DataGarage/convert-json.png?branch=master)](https://travis-ci.org/DataGarage/convert-json)
+
 Auto detect different type of file format and convert it into JSON.
 
 ## Support
