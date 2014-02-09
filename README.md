@@ -19,7 +19,7 @@ npm install convert-json
 
 ## Sample
 
-```
+```javascript
 var cv_json = require('..');
 
 cv_json({
