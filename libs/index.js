@@ -4,8 +4,6 @@ var xls_json = require('xls-to-json');
 var xlsx_json = require('xlsx-to-json');
 var xml_json = require('xml-to-json');
 
-var header = []
-	, record = [];
 
 module.exports = CV_json;
 
