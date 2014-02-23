@@ -3,6 +3,7 @@ var csv_json = require('node-csv-json');
 var xls_json = require('xls-to-json');
 var xlsx_json = require('xlsx-to-json');
 var xml_json = require('xml-to-json');
+var tsv_json = require('node-tsv-json');
 
 
 module.exports = CV_json;
@@ -22,6 +23,9 @@ CV = function(config, callback) {
 	switch(exten) {
 		case 'csv': 
 			return this.cvCSV(config, callback);
+			break;
+		case 'tsv':
+			return this.cvTSV(config, callback);
 			break;
 		case 'xls':
 			return this.cvXLS(config, callback);
@@ -53,6 +57,20 @@ CV.prototype.cvCSV = function(config, callback) {
 	});
 	
 }
+
+CV.prototype.cvTSV = function(config, callback) {
+	tsv_json({
+		input: config.input, 
+		output: config.output
+	}, function(err, result){
+		if(err) {
+			callback(err)
+		}else {
+			callback(null, result)
+		}
+	});
+}
+	
 
 CV.prototype.cvXLS = function(config, callback) {
 	xls_json({
