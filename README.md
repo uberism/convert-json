@@ -24,7 +24,7 @@ npm install convert-json
 var cv_json = require('..');
 
 cv_json({
-    // now supporting csv, xls, xlsx, xml format
+    // now supporting csv, xls, xlsx, tsv, xml format
     input: __dirname + '/number_format.xls',
     output: null
   }, function(err, result) {
