@@ -10,6 +10,7 @@ Auto detect different type of file format and convert it into JSON.
 - xlsx
 - xls
 - xml
+- tsv
 
 ## Install
 

@@ -1,6 +1,6 @@
 {
   "name": "convert-json",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "auto detect file type and convert it to json format",
   "main": "index.js",
   "scripts": {
