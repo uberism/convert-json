@@ -45,6 +45,10 @@ _CV_json.prototype._getExtension = function(filename) {
 }
 
 _CV_json.prototype.cvCSV = function(config, callback) {
+	if(config.preprocess){
+		config.input= preprocess(config.input);
+    }
+
 	csv_json({
 		input: config.input, 
 		output: config.output
