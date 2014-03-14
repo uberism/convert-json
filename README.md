@@ -40,6 +40,8 @@ cv_json({
 
 In config object, you have to enter an input path. But If you don't want to output any file you can set to `null`.
 
+#### input buffer or string
+if you input with `buffer` or `string`, we convert it with csv-converter
 
 ## License
 

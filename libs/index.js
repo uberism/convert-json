@@ -36,7 +36,12 @@ _CV_json = function(config, callback) {
 		case 'xml':
 			return this.cvXML(config, callback);
 		default:
-			callback('Not Support');
+			// if input is a buffer or string
+			// deal with csv
+			if(Buffer.isBuffer(config.input) || typeof config.input === 'string')
+				return this.cvCSV(config, callback);
+			else
+				return callback('Not Support');
 	}
 }
 
@@ -45,10 +50,6 @@ _CV_json.prototype._getExtension = function(filename) {
 }
 
 _CV_json.prototype.cvCSV = function(config, callback) {
-	if(config.preprocess){
-		config.input= preprocess(config.input);
-    }
-
 	csv_json({
 		input: config.input, 
 		output: config.output
