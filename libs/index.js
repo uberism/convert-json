@@ -36,9 +36,7 @@ _CV_json = function(config, callback) {
 		case 'xml':
 			return this.cvXML(config, callback);
 		default:
-			// if input is a buffer or string
-			// deal with csv
-			if(Buffer.isBuffer(config.input) || typeof config.input === 'string')
+			if(config.type==='csv' && config.input)
 				return this.cvCSV(config, callback);
 			else
 				return callback('Not Support');
