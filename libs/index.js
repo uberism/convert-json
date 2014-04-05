@@ -19,7 +19,7 @@ function CV_json (config, callback) {
 }
 
 _CV_json = function(config, callback) {
-	var exten = this._getExtension(config.input);
+	var exten = this._getExtension(config.input).toLowerCase();
 	switch(exten) {
 		case 'csv': 
 			return this.cvCSV(config, callback);
