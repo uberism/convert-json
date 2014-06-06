@@ -1,6 +1,6 @@
 {
   "name": "convert-json",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "auto detect file type and convert it to json format",
   "main": "index.js",
   "scripts": {
@@ -24,10 +24,10 @@
   },
   "homepage": "https://github.com/DataGarage/convert-json",
   "dependencies": {
-    "xls-to-json": "0.1.0",
-    "xlsx-to-json": "0.1.0",
-    "node-csv-json": "0.1.0",
-    "xml-to-json": "0.1.0"
+    "xls-to-json": "0.2.2",
+    "xlsx-to-json": "0.2.3",
+    "node-csv-json": "0.2.1",
+    "xml-to-json": "0.1.1"
   },
   "devDependencies": {
     "should": "~3.1.2",
