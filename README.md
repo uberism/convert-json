@@ -10,6 +10,7 @@ Auto detect different type of file format and convert it into JSON.
 - xlsx
 - xls
 - xml
+- tsv
 
 ## Install
 
@@ -23,7 +24,7 @@ npm install convert-json
 var cv_json = require('..');
 
 cv_json({
-    // now supporting csv, xls, xlsx, xml format
+    // now supporting csv, xls, xlsx, tsv, xml format
     input: __dirname + '/number_format.xls',
     output: null
   }, function(err, result) {
@@ -39,6 +40,23 @@ cv_json({
 
 In config object, you have to enter an input path. But If you don't want to output any file you can set to `null`.
 
+#### input string to csv
+if you input string istead a file path, bring a `type` parameter
+```javascript
+cv_json({
+    type: 'csv',
+    input: "<csv string...>",
+    output: null
+  }, function(err, result) {
+    if(err) {
+      console.error(err);
+    }else {
+      console.log(result);
+    }
+  
+  }
+  );
+```
 
 ## License
 

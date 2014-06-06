@@ -3,9 +3,8 @@ var csv_json = require('node-csv-json');
 var xls_json = require('xls-to-json');
 var xlsx_json = require('xlsx-to-json');
 var xml_json = require('xml-to-json');
+var tsv_json = require('node-tsv-json');
 
-var header = []
-	, record = [];
 
 module.exports = CV_json;
 
@@ -16,14 +15,17 @@ function CV_json (config, callback) {
 		process.exit(1);
 	}
 
-	var cv = new CV(config, callback);
+	var cv = new _CV_json(config, callback);
 }
 
-CV = function(config, callback) {
-	var exten = this._getExtension(config.input);
+_CV_json = function(config, callback) {
+	var exten = this._getExtension(config.input).toLowerCase();
 	switch(exten) {
 		case 'csv': 
 			return this.cvCSV(config, callback);
+			break;
+		case 'tsv':
+			return this.cvTSV(config, callback);
 			break;
 		case 'xls':
 			return this.cvXLS(config, callback);
@@ -34,15 +36,18 @@ CV = function(config, callback) {
 		case 'xml':
 			return this.cvXML(config, callback);
 		default:
-			callback('Not Support');
+			if(config.type==='csv' && config.input)
+				return this.cvCSV(config, callback);
+			else
+				return callback('Not Support');
 	}
 }
 
-CV.prototype._getExtension = function(filename) {
+_CV_json.prototype._getExtension = function(filename) {
 	return filename.split('.').pop();
 }
 
-CV.prototype.cvCSV = function(config, callback) {
+_CV_json.prototype.cvCSV = function(config, callback) {
 	csv_json({
 		input: config.input, 
 		output: config.output
@@ -56,7 +61,21 @@ CV.prototype.cvCSV = function(config, callback) {
 	
 }
 
-CV.prototype.cvXLS = function(config, callback) {
+_CV_json.prototype.cvTSV = function(config, callback) {
+	tsv_json({
+		input: config.input, 
+		output: config.output
+	}, function(err, result){
+		if(err) {
+			callback(err)
+		}else {
+			callback(null, result)
+		}
+	});
+}
+	
+
+_CV_json.prototype.cvXLS = function(config, callback) {
 	xls_json({
 		input: config.input, 
 		output: config.output
@@ -69,7 +88,7 @@ CV.prototype.cvXLS = function(config, callback) {
 	});
 }
 
-CV.prototype.cvXLSX = function(config, callback) {
+_CV_json.prototype.cvXLSX = function(config, callback) {
 	xlsx_json({
 		input: config.input, 
 		output: config.output
@@ -82,7 +101,7 @@ CV.prototype.cvXLSX = function(config, callback) {
 	});
 }
 
-CV.prototype.cvXML = function(config, callback) {
+_CV_json.prototype.cvXML = function(config, callback) {
 	xml_json({
 		input: config.input, 
 		output: config.output
