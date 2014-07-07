@@ -1,7 +1,8 @@
 {
   "name": "convert-json",
-  "version": "0.3.2",
-  "description": "auto detect file type and convert it to json format",
+  "version": "0.4.0",
+  "description": "A collection of converting multiple formats of files to JSON.
+",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha"
@@ -24,11 +25,10 @@
   },
   "homepage": "https://github.com/DataGarage/convert-json",
   "dependencies": {
-    "xls-to-json": "0.2.1",
-    "xlsx-to-json": "0.2.1",
-    "node-csv-json": "0.2.1",
-    "xml-to-json": "0.1.1",
-    "node-tsv-json": "~0.2.0"
+    "csv-streamify": "^1.0.0",
+    "xlsjs": "^0.7.0",
+    "xlsx": "^0.7.7",
+    "xml2js": "^0.4.4"
   },
   "devDependencies": {
     "should": "~3.1.2",

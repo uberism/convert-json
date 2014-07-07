@@ -1,115 +1,61 @@
 var fs = require('fs');
-var csv_json = require('node-csv-json');
-var xls_json = require('xls-to-json');
-var xlsx_json = require('xlsx-to-json');
-var xml_json = require('xml-to-json');
-var tsv_json = require('node-tsv-json');
+var csv = require('csv-streamify');
+var XLS = require('xlsjs');
+var XLSX = require('xlsx');
+var xml2js = require('xml2js');
 
 
-module.exports = CV_json;
-
-function CV_json (config, callback) {
-
-	if(!config.input) {
-		console.error("You have to have an input file");
-		process.exit(1);
+function csv_json (file, opts, cb) {
+	var fstream = fs.createReadStream(file);
+	if(arguments.length === 2 && typeof arguments[1] === 'function') {
+		// no opts
+		cb = opts;
+		opts = null;
 	}
 
-	var cv = new _CV_json(config, callback);
+	return fstream.pipe(csv(opts, cb));
 }
 
-_CV_json = function(config, callback) {
-	var exten = this._getExtension(config.input).toLowerCase();
-	switch(exten) {
-		case 'csv': 
-			return this.cvCSV(config, callback);
-			break;
-		case 'tsv':
-			return this.cvTSV(config, callback);
-			break;
-		case 'xls':
-			return this.cvXLS(config, callback);
-			break;
-		case 'xlsx':
-			return this.cvXLSX(config, callback);
-			break;
-		case 'xml':
-			return this.cvXML(config, callback);
-		default:
-			if(config.type==='csv' && config.input)
-				return this.cvCSV(config, callback);
-			else
-				return callback('Not Support');
+function xls_json (file, opts, cb) {
+	if(arguments.length === 2 && typeof arguments[1] === 'function') {
+		// no opts
+		cb = opts;
+		opts = null;
 	}
+
+	return cb(null, XLS.readFile(file, opts));
 }
 
-_CV_json.prototype._getExtension = function(filename) {
-	return filename.split('.').pop();
+function xlsx_json (file, opts, cb) {
+	if(arguments.length === 2 && typeof arguments[1] === 'function') {
+		// no opts
+		cb = opts;
+		opts = null;
+	}
+
+	return cb(null, XLSX.readFile(file, opts));
 }
 
-_CV_json.prototype.cvCSV = function(config, callback) {
-	csv_json({
-		input: config.input, 
-		output: config.output
-	}, function(err, result){
-		if(err) {
-			callback(err)
-		}else {
-			callback(null, result)
-		}
-	});
+function xml_json (file, opts, cb) {
+	if(arguments.length === 2 && typeof arguments[1] === 'function') {
+		// no opts
+		cb = opts;
+		opts = null;
+	}
 	
-}
-
-_CV_json.prototype.cvTSV = function(config, callback) {
-	tsv_json({
-		input: config.input, 
-		output: config.output
-	}, function(err, result){
-		if(err) {
-			callback(err)
-		}else {
-			callback(null, result)
-		}
-	});
-}
-	
-
-_CV_json.prototype.cvXLS = function(config, callback) {
-	xls_json({
-		input: config.input, 
-		output: config.output
-	}, function(err, result){
-		if(err) {
-			callback(err)
-		}else {
-			callback(null, result)
-		}
+	var parser = new xml2js.Parser();
+	fs.readFile(file, function(err, data) {
+		if(err)
+			cb(err);
+		else
+	    	parser.parseString(data, cb);
 	});
 }
 
-_CV_json.prototype.cvXLSX = function(config, callback) {
-	xlsx_json({
-		input: config.input, 
-		output: config.output
-	}, function(err, result){
-		if(err) {
-			callback(err)
-		}else {
-			callback(null, result)
-		}
-	});
-}
 
-_CV_json.prototype.cvXML = function(config, callback) {
-	xml_json({
-		input: config.input, 
-		output: config.output
-	}, function(err, result){
-		if(err) {
-			callback(err)
-		}else {
-			callback(null, result)
-		}
-	});
-}
+module.exports = {
+	csv: csv_json,
+	xls: xls_json,
+	xlsx: xlsx_json,
+	xml: xml_json
+};
