@@ -1,8 +1,7 @@
 {
   "name": "convert-json",
   "version": "0.4.0",
-  "description": "A collection of converting multiple formats of files to JSON.
-",
+  "description": "A collection of converting multiple formats of files to JSON.",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha"
