@@ -1,5 +1,7 @@
 # Convert JSON
 
+[![Build Status](https://travis-ci.org/DataGarage/convert-json.svg?branch=master)](https://travis-ci.org/DataGarage/convert-json)
+
 A collection of converting multiple formats of files to JSON.
 
 ## Support
