@@ -30,7 +30,7 @@ var csv_trans = cv2json.csv('./test/test.csv', options /* optional */, function(
 })
 ```
 
-The first argument is a csv input file, for options see details https://github.com/klaemo/csv-stream#options, and the last argument is a callback function.
+The first argument is a csv input file, for options see details https://github.com/chilijung/CSVstream#options-csvstreamoptions, and the last argument is a callback function.
 
 ### XLS
 
@@ -85,7 +85,7 @@ The first argument is a xml input file, for options see details https://github.c
 
 - csv
   
-https://github.com/klaemo/csv-stream
+https://github.com/chilijung/csvstream
 
 - xlsx
 

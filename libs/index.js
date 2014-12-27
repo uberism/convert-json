@@ -1,5 +1,5 @@
 var fs = require('fs');
-var csv = require('csv-streamify');
+var csv = require('csvstream');
 var XLS = require('xlsjs');
 var XLSX = require('xlsx');
 var xml2js = require('xml2js');

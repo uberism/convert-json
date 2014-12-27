@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/DataGarage/convert-json",
   "dependencies": {
-    "csv-streamify": "^1.0.0",
+    "csvstream": "^1.0.0",
     "xlsjs": "^0.7.0",
     "xlsx": "^0.7.7",
     "xml2js": "^0.4.4"
