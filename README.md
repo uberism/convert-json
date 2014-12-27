@@ -78,7 +78,7 @@ var csv_trans = cv2json.xml('./test/test.xml', options /* optional */, function(
 })
 ```
 
-The first argument is a xls input file, for options see details https://github.com/Leonidas-from-XIV/node-xml2js#options, and the last argument is a callback function.
+The first argument is a xml input file, for options see details https://github.com/Leonidas-from-XIV/node-xml2js#options, and the last argument is a callback function.
 
 
 ## Library using
